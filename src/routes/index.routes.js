@@ -7,11 +7,7 @@ import authMiddleware from "../middlewares/authMiddleware.js";
 
 const router = express.Router();
 
-// Rotas Públicas
-
-
-// Rotas Particulares/Protegidas
-
-
+router.use("/users", authMiddleware, userRoutes);
+router.use("/obras", obraRoutes);
 
 export default router;
